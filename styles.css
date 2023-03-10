@@ -1,0 +1,214 @@
+/* Import fonts from Adobe Fonts */
+@import url("https://use.typekit.net/mix4uty.css");
+
+/* Removing margin from all site elements */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+/* Setting HTML height */
+html {
+  height: 100%;
+}
+
+/* General rules for body */
+body {
+  background-color: #fffef5;
+  font-family: utopia-std, serif;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  height: 15.5vh;
+}
+header img {
+  width: 280px;
+}
+nav {
+  width: 450px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+nav a {
+  color: black;
+  text-decoration: none;
+  font-size: 15pt;
+}
+nav a::after {
+  content: "";
+  border-bottom: 2px solid black;
+  width: 0%;
+  transition: width 0.3s ease-in-out;
+  display: block;
+}
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 230px;
+  background-color: #eeece0;
+}
+footer a {
+  font-family: mr-eaves-modern, sans-serif;
+  font-weight: 200;
+  padding: 7px 0px;
+  text-decoration: none;
+  color: black;
+  font-size: 14pt;
+}
+footer h3 {
+  font-size: 15pt;
+  font-weight: 400;
+}
+#practical div,
+#contact div,
+#socials {
+  display: flex;
+  flex-direction: column;
+  margin-top: 35px;
+}
+footer i {
+  font-size: 20pt;
+}
+
+/* Front page main */
+#main-wrap {
+  display: flex;
+  height: 84.5vh;
+}
+
+#fp-pictures {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  padding-bottom: 50px;
+}
+
+#fp-pictures div {
+  width: 100%;
+  padding-top: 38%;
+}
+
+#fp-pictures div:nth-child(1) {
+  background-image: url(images/front1.jpg);
+  background-size: cover;
+  background-position: center;
+  transition: opacity 1s;
+}
+
+#fp-pictures div:nth-child(2) {
+  background-image: url(images/front2.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 70%;
+}
+
+#fp-pictures div:nth-child(3) {
+  background-image: url(images/front3.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 80%;
+}
+
+/* Gallery main */
+
+/* Filtering */
+#filtering {
+  position: relative;
+  margin-top: 50px;
+  margin-left: 5%;
+  margin-bottom: 50px;
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#filtering h2 {
+  font-size: 15pt;
+  font-weight: 500;
+}
+.filter-type {
+  cursor: pointer;
+  font-family: mr-eaves-modern, sans-serif;
+  font-weight: 400;
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+}
+.filter-drop {
+  width: 120px;
+  position: absolute;
+  top: 100%;
+  background-color: #eeece0;
+  padding: 10px;
+  flex-direction: column;
+  align-items: flex-start;
+  display: none;
+}
+.filter-drop div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0px;
+}
+.last-two {
+  padding: 0;
+  justify-content: space-between;
+  display: none;
+}
+.last-two p {
+  width: 100%;
+  text-align: center;
+  padding: 12px 0px;
+}
+.filter-show {
+  display: flex;
+}
+.fa-check {
+  display: none;
+}
+
+/* Gallery */
+#gallery {
+  column-count: 3;
+  column-gap: 20px;
+  max-width: 90%;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+#gallery div {
+  break-inside: avoid;
+}
+#gallery img {
+  height: auto;
+  max-width: 100%;
+}
+.image-text {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 10pt;
+}
+
+@media screen and (max-width: 1024px) {
+  #gallery {
+    column-count: 2;
+  }
+}
